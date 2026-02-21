@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Counter:0<span id="count">0</span></p>
+    <button onclick="increase()">+</button>
+      <button onclick="decrease()">-</button>
+        <button onclick="reset()">reset</button>
+
+</body>
+<script>
+    let count=0
+    function increase(){
+     count--
+     document.getElementbyId('count').innerText=count
+    }
+    function decrease(){
+     count++
+     document.getElementbyId('count').innerText=count
+    }
+</script>
+</html>

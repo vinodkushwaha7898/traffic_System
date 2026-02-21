@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin-top: 20px;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+        .box{
+            width:200px;
+            height: 100px;
+            background-color: lightblue;
+            margin:10px auto;
+            line-height: 100px;
+        }
+        .active{
+            background-color: aquamarine;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h2>javascript event practice!!</h2>
+
+    <p id="para">This is paragraph!</p>
+    <button onclick="changeText()">Change paragraph text</button>
+<br></br>
+
+<button onclick="changeBg()">Change Background Color</button>
+<br><br>
+
+<button onclick="showAlert()">Show Alert</button>
+    <br><br>
+
+    <input type="text" id="myInput" placeholder="Enter something">
+    <button onclick="showInput()">Show Input Value</button>
+    <p id="inputResult"></p>
+    <br>
+<img id="myImage"
+        src="https://via.placeholder.com/150/0000FF"
+        onmouseover="changeImage()"
+        onmouseout="originalImage()"
+        width="150">
+    <br><br>
+
+<script>
+    function changeText(){
+        document.getElementById("para").innerText="paragraph text chaged color!";
+    }
+
+    function changeBg() {
+        document.body.style.backgroundColor = "lightgreen";
+    }
+
+function showAlert() {
+        alert("Button Clicked!");
+    }
+
+     function showInput() {
+        let value = document.getElementById("myInput").value;
+        document.getElementById("inputResult").innerText = value;
+    }
+
+    function changeImage() {
+        document.getElementById("myImage").src =
+            "https://via.placeholder.com/150/FF0000";
+    }
+</script>
+</body>
+</html>

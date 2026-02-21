@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Register</h2>
+        <form onsubmit="register(event)">
+        <label>FullName:</label>
+        <input id="name" title="name" required type="text" placeholder="Enter_your_name" />
+        <br/>
+        <label>Email_ID:</label>
+        <input id="email" title="email" required type="text" placeholder="xyz1234@gmail.com"/>
+        <br/>
+        <label>Password:</label>
+        <input id="password" title="password" required type="text"placeholder="Xyz@123" />
+        <br/>
+        <label>Aaddhar_NO:</label>
+        <input id="aaddhar" title="aaddhar" required type="text"placeholder="Enter_Aaddhar_No" />
+        <br/>
+        <label>Mobail_NO:</label>
+        <input id="mobail" title="mobail" required type="text"placeholder="Enetr_Mobail_NO" />
+        <br/>
+        <label>City_Name:</label>
+        <input id="city" title="city" required type="text"placeholder="City_Name" />
+        <br/>
+        <label>DOB:</label>
+        <input id="DateofBirth" title="DataofBirth" required type="text"placeholder="DD/MM/YYYY" />
+        <br/>
+        <br/>
+        <button type="submit">Register</button>
+    </form>
+    <span id="msg"></span>
+
+    
+</body>
+<script>
+   function register(event) {
+    event.preventDefault()
+     
+    const name=document.getElementById('name').value
+    const email=document.getElementById('email').value
+    const password=document.getElementById('password').value
+    const aaddhar=document.getElementById('aaddhar').value
+    const mobail=document.getElementById('mobail').value
+    const city=document.getElementById('city').value
+    const DateofBirth=document.getElementById('DateofBirth').value
+       
+    const emailRegex=/^[^@]+@[^@]+\.[^@]+$/
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/
+    const mobailRegex = /^[6-9]\d{9}$/
+    const DateofBirthRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/
+    const aaddharRegex = /^(\d{12}|\d{4}\s\d{4}\s\d{4})$/
+    if(emailRegex.test(email)===true && passwordRegex.test(password)===true && mobailRegex.test(mobail)===true && aaddharRegex.test(aaddhar)===true && DateofBirthRegex.test(DateofBirth)===true){
+        document.getElementById('msg').innerHTML = "Pattern Matched"
+    }
+    else{
+        document.getElementById('msg').innerHTML = "Pattern  Not Matched"
+    }
+       }
+</script>
+</html>

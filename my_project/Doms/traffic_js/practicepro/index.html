@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Web ❤️ Love | Cinematic Animation!</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+body{
+  background:#000;
+  overflow:hidden;
+}
+.scene{
+  position:absolute;
+  width:100vw;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:3rem;
+  opacity:0;
+  animation: show 250s linear forwards;
+}
+.scene1{background:radial-gradient(circle,#1a1a40,#000);animation-delay:0s;}
+.scene2{background:linear-gradient(120deg,#ff512f,#dd2476);animation-delay:2s;}
+.scene3{background:linear-gradient(120deg,#24c6dc,#514a9d);animation-delay:2s;}
+.scene4{background:linear-gradient(120deg,#11998e,#38ef7d);animation-delay:2s;}
+.scene5{background:radial-gradient(circle,#f7971e,#ffd200);animation-delay:2s;}
+@keyframes show{
+  0%{opacity:0;}
+  5%{opacity:1;}
+  20%{opacity:1;}
+  25%{opacity:0;}
+  100%{opacity:0;}
+}
+
+.text{
+  animation: float 6s ease-in-out infinite, glow 2s alternate infinite;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-20px);}
+}
+
+@keyframes glow{
+  from{text-shadow:0 0 10px #fff;}
+  to{text-shadow:0 0 40px #ff00ff;}
+}
+
+.heart{
+  position:absolute;
+  width:40px;
+  height:40px;
+  background:red;
+  transform:rotate(45deg);
+  animation:pulse 1.5s infinite;
+}
+.heart::before,.heart::after{
+  content:'';
+  position:absolute;
+  width:40px;
+  height:40px;
+  background:red;
+  border-radius:50%;
+}
+.heart::before{left:-20px;}
+.heart::after{top:-20px;}
+
+@keyframes pulse{
+  0%{transform:scale(1) rotate(45deg);}
+  50%{transform:scale(1.5) rotate(45deg);}
+  100%{transform:scale(1) rotate(45deg);}
+}
+</style>
+</head>
+<body>
+
+<div class="scene scene1">
+  <div class="text">Welcome To My websites! ❤️ Love<br><small>Once Upon a Feeling</small></div>
+</div>
+
+<div class="scene scene2">
+  <div class="text">When Eyes Met<br><div class="heart"></div></div>
+</div>
+
+<div class="scene scene3">
+  <div class="text">Love Grew Stronger<br><div class="heart"></div></div>
+</div>
+
+<div class="scene scene4">
+  <div class="text">Together Forever<br><div class="heart"></div></div>
+</div>
+
+<div class="scene scene5">
+  <div class="text">My look is ❤️ Love<br>Infinity ♾️</div>
+</div>
+
+<!-- Proposal Scene -->
+<div class="scene scene6" style="background:linear-gradient(120deg,#169a61,#ffb199); animation-delay:300s;">
+  <div class="text">
+    My first time your like project 💍<br><br>
+    <strong>"Will You Be Mine Forever?"</strong>
+    <div class="heart"></div>
+  </div>
+</div>
+
+</body>

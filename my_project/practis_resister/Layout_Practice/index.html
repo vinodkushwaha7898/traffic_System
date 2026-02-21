@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="layout.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">- : WELCOME TO MY FRONT PAGE : -</div>
+    <div class="main">
+
+
+        <div class="sidebar">
+            <div class="tab">HTML</div>
+            <div class="tab">CSS</div>
+            <div class="tab">JS</div>
+            <div class="tab">Java</div>
+            <div class="tab">React</div>
+            <div class="tab">Next Java</div>
+            <div class="tab">Angular Java</div>
+            <div class="tab">Node Java</div>
+            <div class="tab">Nust Java</div>
+            <div class="tab">Mongo-DB</div>
+            <div class="tab">Mern</div>
+            <div class="tab">TypeScript</div>
+            <div class="tab">Three-Js</div>
+            <div class="tab">Express</div>
+            <div class="tab">MySQL</div>
+            <div class="tab">PostgreSQL</div>
+            <div class="tab">Pi</div>
+            <div class="tab">All-technique</div>
+    </div>
+
+        <div class="Content">
+    <div class="box">
+        <h2 id="content" class="boxkey" class="key">Welcome</h2>
+    </div>
+</div>
+
+    </div>
+
+    <div class="footer">Footer</div>
+</body>
+<script>
+    let data=document.querySelectorAll('.tab')
+    let value=document.getElementById('content')
+
+    data.forEach(item=>{
+        item.addEventListener('click',()=>{
+            const n=item.textContent
+            value.textContent=n
+        })
+    });
+</script>
+</html>

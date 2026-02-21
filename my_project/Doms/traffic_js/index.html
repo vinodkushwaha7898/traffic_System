@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Traffic</title>
+</head>
+<style>
+    body{
+        margin:0%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+.Traffic{
+height: 340px;
+width: 100px;
+margin:50px , auto;
+padding:15px;
+border-radius: 10px;
+background-color: rgb(42, 78, 88);
+}
+.signle{
+    background-color: aliceblue;
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+    margin:10px,auto;
+    padding:13px;
+    display: grid;
+    justify-content: space-between;
+    gap:10px;
+}
+</style>
+<body>
+<div class="Traffic">
+<div class="signle" id="red"></div>
+<div class="signle" id="orange"></div>
+<div class="signle" id="green"></div>
+</div>
+<script>
+function Repeatesignle(){
+document.getElementById("red").style.backgroundColor="white"
+document.getElementById("orange").style.backgroundColor="white"
+document.getElementById("green").style.backgroundColor="white"
+}
+function startsignle(){
+    Repeatesignle();
+    document.getElementById("red").style.backgroundColor="green";
+    setTimeout(()=>{
+        Repeatesignle();
+
+    document.getElementById("orange").style.backgroundColor="red";
+    },2000);
+    setTimeout(()=>{
+        Repeatesignle();
+
+        document.getElementById("green").style.backgroundColor="orange";
+    },4000);
+    }
+    startsignle();
+    setInterval(startsignle,7000);
+</script>
+</body>
+</html>
